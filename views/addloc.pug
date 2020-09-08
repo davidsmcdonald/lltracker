@@ -1,0 +1,21 @@
+extends layout
+
+block main
+  form(action="/location" method="post")
+    dl
+      dt
+        label(for="latitude") Latitude:
+      dd
+        input(type="text"
+              id="latitude"
+              name="latitude")
+              
+      dt
+        label(for="longitude") Longitude:
+      dd
+        input(type="text"
+              id="longitude"
+              name="longitude")
+
+    fieldset.actions
+      input(type="submit" value="Submit location")

@@ -1,0 +1,18 @@
+extends layout
+
+block main
+  
+  table
+    thead
+      tr
+        th Time
+        th Latitude
+        th Longitude
+        
+    tbody
+      each dataPoint in data
+        tr
+          td= dataPoint.logtime
+          td= dataPoint.lat
+          td= dataPoint.lon
+        

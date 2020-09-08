@@ -1,0 +1,278 @@
+body {
+  background-color: #f7f7f7;
+  color: #3f3f3f;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+}
+
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px 0 40px;
+}
+
+main > form,
+footer > form {
+  margin-top: 1.5rem;
+}
+
+form dt {
+  padding: 0 0 25px;
+}
+
+form dd {
+  padding: 0 0 15px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"]
+ {
+  border: 1px solid #a4a4a4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: normal 18px Walfork,Walsheim,Helvetica Neue,Helvetica,Arial,sans-serif;
+  height: 50px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+form textarea {
+  border: 1px solid #a4a4a4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: normal 18px Walfork,Walsheim,Helvetica Neue,Helvetica,Arial,sans-serif;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+form input[type="submit"],
+form fieldset button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  color: #f7f7f7;
+  font: normal 20px Walfork,Walsheim,Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin: 0 40px 0 0;
+  padding: 12px 45px;
+
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -webkit-transition: background-color 200ms ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #db278a;
+  cursor: pointer;
+}
+
+form fieldset.actions a:hover {
+  color: #db278a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  background: #1a1a1a;
+  width: 100%;
+  height: 70px;
+  color: #f7f7f7;
+}
+
+.actions {
+  padding: 40px 80px;
+
+}
+
+.add {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: #db278a;
+}
+
+.nav_link {
+  font-size: 15px;
+  margin-left: 30px;
+  color: #5e5e5e;
+  font-weight: 500;
+  position: relative;
+  bottom: 4px;
+}
+
+header a:hover {
+  color: #f7f7f7;
+}
+
+header > img {
+  margin-left: 40px;
+  margin-top: 20px;
+  width: 130px;
+}
+
+#reviews {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+}
+
+.list_box {
+  background: #fff;
+  padding: 15px;
+}
+
+.logo {
+  width: 300px;
+  margin: 25px;
+}
+
+h2.list {
+  font-size: 20px;
+}
+
+h3.list {
+  font-weight: 500;
+  font-style: italic;
+  padding-left: 5px;
+}
+
+div.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 250px 200px;
+  grid-template-rows: 100px 100px 1fr 100px;
+  background: #fff;
+}
+
+.title {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  color: #1a1a1a;
+  font-family: Tiempos Headline,Tiempos,Georgia,serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+
+.artist {
+  color: #1a1a1a;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-family: Tiempos Headline,Tiempos,Georgia,serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  align-self: center;
+}
+
+.cover {
+  grid-column: 4 / 5;
+  grid-row: 2 / 4;
+}
+
+.cover > img {
+  width: 100%;
+}
+
+/* .album label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .075em;
+  font-weight: 600;
+  display: block;
+  padding: 1.25em 40px 0;
+  text-align: center;
+  color: #b3b3b3;
+} */
+
+/* .album a {
+  font-family: Walfork,Walsheim,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 3.6rem;
+  margin-bottom: .25em;
+} */
+
+.score {
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  top: 16px;
+}
+
+.score-circle {
+  width: 50%;
+  height: 0;
+  color: #1a1a1a;
+  padding-bottom: calc(70% - 30px);
+  border-radius: 100%;
+  border: 7px solid #1a1a1a;
+}
+
+.score-box {
+  grid-column: 5 / 6;
+  grid-row: 2 / 4;
+  width: 150px;
+  min-height: 1px;
+  padding-left: 40px;
+  text-align: center;
+  align-self: center;
+}
+
+.review_container {
+  margin: 40px 180px;
+}
+
+.review_container>p:first-child:first-letter {
+    float: left;
+    font-size: 6.2em;
+    line-height: 1.1em;
+    margin: -.15em .08em -.2em 0;
+}
+
+.review_text {
+  line-height: 1.875;
+  font-size: 1.3rem;
+  font-family: Tiempos, Georgia, Serif;
+}
+
+.review_edit {
+  line-height: 4;
+  font-family: Walfork, Walsheim, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.flash {
+  background-color: #cbe5f2;
+  color: #3399cc;
+  margin: 20px 0 1.5rem;
+  max-width: 1000px;
+  padding: 10px 20px;
+}
+
+.flash p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.flash.error {
+  background-color: #ffcfbf;
+  color: #ff6633;
+}
+
+.flash.success {
+  background-color: #cbf2e5;
+  color: #33cc99;
+}
