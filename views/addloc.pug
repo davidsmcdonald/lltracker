@@ -1,7 +1,8 @@
 extends layout
 
 block main
-  form(action="/location" method="post")
+  form(action="/demo/addlocation" method="post")
+    h2 Add a Location
     dl
       dt
         label(for="latitude") Latitude:
@@ -19,3 +20,9 @@ block main
 
     fieldset.actions
       input(type="submit" value="Submit location")
+    
+  form(method="post" action="/demo/signout") 
+    input(type="hidden" name="extra_submit_param" value="extra_submit_value")
+      
+    fieldset.signout
+      input(type="submit" value="Sign Out")

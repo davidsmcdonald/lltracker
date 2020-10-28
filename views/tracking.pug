@@ -2,17 +2,22 @@ extends layout
 
 block main
   
+  h2 Location History
+  h3 user: #{username}
+  
   table
     thead
       tr
         th Time
         th Latitude
         th Longitude
+        th Google Maps
         
     tbody
-      each dataPoint in data
+      each val in data
         tr
-          td= dataPoint.logtime
-          td= dataPoint.lat
-          td= dataPoint.lon
-        
+          td= val.logtime
+          td= val.latitude
+          td= val.longitude
+          td 
+            a(href=`https://www.google.com/maps/search/?api=1&query=${val.latitude},${val.longitude}`) Show on Maps

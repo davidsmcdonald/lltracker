@@ -1,14 +1,14 @@
 {
-  "name": "WhereIAm",
+  "name": "lltracker",
   "version": "1.0.0",
   "description": "",
-  "main": "whereIAm.js",
+  "main": "lltracker.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "heroku-postbuild": "npm install --production",
-    "start": "npx nodemon wereIAm.js"
+    "start": "npx nodemon lltracker.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "express-flash": "0.0.2",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.3.0",
     "pug": "^3.0.0"

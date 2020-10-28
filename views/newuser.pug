@@ -1,12 +1,12 @@
 extends layout
 
 block main
-  form(action="/users/new" method="post")
+  form(action="/demo/new" method="post")
     dl
       dt
         label(for="username") Username:
       dd
-        input(type="text" name="username" placeholder="username" value=username)
+        input(type="text" name="username" placeholder="username")
 
       dt
         label(for="password") Password:

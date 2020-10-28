@@ -3,16 +3,15 @@ doctype html
 html(lang="en-US")
 
   head
-    title Where I Am
+    title LLtracker
     meta(charset="UTF-8")
     link(rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans")
     link(rel="stylesheet" href="/stylesheets/whitespace-reset.css")
     link(rel="stylesheet" href="/stylesheets/application.css")
   body
-    header(class="primary_nav")
-      a(href="/home" class='nav_link') HOME
-      
-
+    header
+      h1 LLtracker
+      a(href="/track") Tracking Home
     main
       - let kinds = Object.keys(flash || {});
       if kinds.length > 0

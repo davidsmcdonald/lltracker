@@ -1,0 +1,16 @@
+extends layout
+
+block main
+  h2 LLtracker
+  p Share your location with the Android app
+    a(href="#")  (download it here)
+  
+  form(action="/finduser" method="get")
+    dl
+      dt
+        label(for="username") Enter a username to find their location data or use 'admin' to see sample data
+      dd
+        input(type="text" name="username" placeholder="username" value=username)
+
+    fieldset.actions
+      input(type="submit" value="Find user")

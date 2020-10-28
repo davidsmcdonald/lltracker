@@ -1,10 +1,9 @@
 CREATE TABLE locations (
-  user text,
+  username text,
   latitude text,
   longitude text,
   logtime timestamp NOT NULL,
-  PRIMARY KEY (user),
-  FOREIGN KEY (user) REFERENCES users (username) ON DELETE CASCADE
+  FOREIGN KEY (username) REFERENCES users (username) ON DELETE CASCADE
 );
 
 CREATE TABLE users (

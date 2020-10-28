@@ -2,9 +2,11 @@ extends layout
 
 block main
   p New user? Create a username 
-    a(href="/users/new") here
+    a(href="/demo/new") here
+  br
+  p - or log in with username: "admin" and password: "testpassword" to try out a demo. 
   
-  form(action=`/users/signin` method="post")
+  form(action=`/demo/validate` method="post")
     dl
       dt
         label(for="username") Username:
