@@ -273,7 +273,7 @@ app.post("/signin",
     } else {
       const payload = { user: username };
       const options = { expiresIn: '31d', issuer: 'https://lltracker.herokuapp.com' };
-      const secret = config.JWT_SECRET;
+      const secret = "config.JWT_SECRET1234";
       const token = jwt.sign(payload, secret, options);
 
       result.token = token;
@@ -325,7 +325,7 @@ app.post("/signin",
 // Error handler
 app.use((err, req, res, _next) => {
   console.log(err); // Writes more extensive information to the console log
-  res.status(404).send(err.message);
+  res.status(404).send(err.message + 'and so on');
 });
 
 // Listener
