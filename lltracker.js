@@ -63,7 +63,6 @@ const requiresAuthentication = (req, res, next) => {
 
 const requiresToken = (req, res, next) => {
   const authorizationHeader = req.headers.token;
-  console.log(authorizationHeader);
   let result;
   if (authorizationHeader) {
     // const authToken = req.headers.token.split(' ')[1];
@@ -175,7 +174,6 @@ app.post('/demo/validate',
     let username = req.body.username;
     let password = req.body.password;
 
-    console.log(username, password);
     let validUser = await res.locals.store.authenticate(username, password);
     if (!validUser) {
       req.flash("error", "Invalid credentials.");
@@ -195,7 +193,6 @@ app.post('/demo/validate',
 app.post('/demo/addlocation',
   requiresAuthentication,
   catchError(async (req, res) => {
-    console.log(req.body);
     let location = req.body;
     let lat = location.latitude;
     let lon = location.longitude;
@@ -242,7 +239,6 @@ app.post('/destroy',
 app.post('/addlocation',
   requiresToken,
   catchError(async (req, res) => {
-    console.log(req.body);
     let location = req.body;
     let lat = location.latitude;
     let lon = location.longitude;
@@ -256,16 +252,15 @@ app.post('/addlocation',
       if (!created) {
         res.status(400).send('Not Created')
       } else {
-        console.log(JSON.stringify(created));
-        res.status(201).send({"username":"dummyuser","latitude":"32.12","longitude":"-110.43","logtime":"1600373991187"});
+        res.status(201).send({"username":`${username}`,"latitude":`${String(lat)}`,"longitude": `${String(lon)}`,"logtime":`${appTime}`});
       }
   }));
 
 
 app.post("/signin",
   catchError(async (req, res) => {
-    const username = req.body.username.trim();
-    const password = req.body.password.trim();
+    const username = req.body.username;
+    const password = req.body.password;
     const result = {};
     let status = 200;
 
