@@ -72,7 +72,7 @@ const requiresToken = (req, res, next) => {
       issuer: 'https://lltracker.herokuapp.com/'
     };
     try {
-      result = jwt.verify(authToken, process.env.JWT_SECRET, options);
+      result = jwt.verify(authToken, config.JWT_SECRET, options);
       req.decoded = result;
       next();
     } catch(err) {
@@ -272,8 +272,8 @@ app.post("/signin",
       result.message = "Login failed, please try again.";
     } else {
       const payload = { user: username };
-      const options = { expiresIn: '31d', issuer: 'https://lltracker.herokuapp.com/' };
-      const secret = process.env.JWT_SECRET;
+      const options = { expiresIn: '31d', issuer: 'https://lltracker.herokuapp.com' };
+      const secret = config.JWT_SECRET;
       const token = jwt.sign(payload, secret, options);
 
       result.token = token;
@@ -307,7 +307,7 @@ app.post("/signin",
         } else if (created) {
           const payload = { user: username };
           const options = { expiresIn: '31d', issuer: 'https://lltracker.herokuapp.com/' };
-          const secret = process.env.JWT_SECRET;
+          const secret = config.JWT_SECRET;
           const token = jwt.sign(payload, secret, options);
 
           result.token = token;
