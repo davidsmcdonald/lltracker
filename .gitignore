@@ -2,3 +2,4 @@
 session-store.db
 node_modules
 lib/users.sql
+lib/config.js
