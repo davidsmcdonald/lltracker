@@ -21,7 +21,7 @@ main,
 footer {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 20px 0 40px;
+  padding: 40px;
 }
 
 main > form,
